@@ -13,18 +13,18 @@ Across both benchmarks, spectral attention-graph differences between correct and
 ## Notebooks
 
 ### GSM8K
-1. `01_gsm8k_generation.ipynb` — response generation and tensor extraction
-2. `02_gsm8k_analysis.ipynb` — correctness labeling and audit
-3. `03_gsm8k_features.ipynb` — spectral features, confound analysis, and classification
+1. `01-gsm8k-generation.ipynb` — response generation and tensor extraction
+2. `02-gsm8k-analysis.ipynb` — correctness labeling and audit
+3. `03-gsm8k-features.ipynb` — spectral features, confound analysis, and classification
 
 ### ARC-Challenge
-4. `04_arc_generation.ipynb` — response generation and tensor extraction
-5. `05_arc_analysis.ipynb` — correctness labeling and audit
-6. `06_arc_features.ipynb` — spectral features, confound analysis, and classification
+4. `04-arc-generation.ipynb` — response generation and tensor extraction
+5. `05-arc-analysis.ipynb` — correctness labeling and audit
+6. `06-arc-features.ipynb` — spectral features, confound analysis, and classification
 
 ### Final analyses
-7. `07_final_statistics.ipynb` — multiple-testing correction and robustness analyses
-8. `08_cleanup.ipynb` — final verification analyses
+7. `07-final-statistics.ipynb` — multiple-testing correction and robustness analyses
+8. `08-cleanup.ipynb` — final verification analyses
 
 ## Requirements
 
