@@ -1,0 +1,8 @@
+transformers>=4.36
+datasets
+torch
+numpy
+pandas
+scipy
+statsmodels
+scikit-learn
