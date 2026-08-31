@@ -6,6 +6,12 @@ Code for **"When Spectral Attention Graphs Fail: A Confound-Aware Study of Reaso
 
 This repository contains the experimental pipeline for analyzing spectral features of layer-wise attention graphs as signals of reasoning correctness. Experiments are conducted on GSM8K and ARC-Challenge using Qwen2.5-0.5B-Instruct.
 
+## Motivation
+
+Recent work has explored the spectral analysis of a transformer's layer-wise attention graphs as a training-free signal of model reliability, reporting differences in spectral features between valid and invalid reasoning and between hallucinated and non-hallucinated responses. However, spectral attention features may also be influenced by structural factors unrelated to reasoning correctness, including response length, attention-sink mass, and effective rank.
+
+To our knowledge, prior work has not jointly controlled for these three potential confounds when evaluating spectral attention features for reasoning correctness. Existing work also analyzes spectral features at individual layers, but does not test whether consecutive layer-to-layer changes provide additional predictive signal. We therefore test whether static and dynamic spectral features predict reasoning correctness beyond these structural confounds.
+
 ## Notebooks
 
 ### GSM8K
@@ -28,9 +34,9 @@ Notebooks were run on Kaggle (2× NVIDIA T4 GPU for generation steps). Key depen
 
 ## Results
 
-On GSM8K, substantial raw spectral differences are observed between correct and incorrect responses, with many surviving multiple-comparison correction. However, these effects are eliminated by screening for response length, attention-sink mass, and effective rank. On ARC-Challenge, raw spectral effects are minimal and do not provide robust predictive improvement beyond the confound-only baseline.
+For both benchmarks, neither static nor dynamic spectral features add predictive signal for reasoning correctness beyond the tested structural confounds. GSM8K shows substantial raw spectral effects, but these effects are explained by response length, attention-sink mass, or effective rank. In contrast, ARC-Challenge's raw spectral effects are minimal.
 
-Across both benchmarks, dynamic layer-to-layer spectral features do not outperform static features or the confound-only baseline, providing no evidence that spectral dynamics add predictive signal for reasoning correctness beyond the tested structural confounds.
+Neither dynamic feature set outperforms the static feature sets for either benchmark, providing no evidence that layer-to-layer spectral changes contain additional predictive signal. Overall, our results suggest that confound-aware evaluation is necessary before interpreting spectral attention-graph diagnostics as evidence of reasoning-specific predictive signal.
 
 ## Reproducibility
 
