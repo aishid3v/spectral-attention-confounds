@@ -28,7 +28,9 @@ Notebooks were run on Kaggle (2× NVIDIA T4 GPU for generation steps). Key depen
 
 ## Results
 
-Across both benchmarks, spectral attention-graph differences between correct and incorrect reasoning are either substantially explained by response length, attention-sink mass, and effective rank, or fail to survive multiple-comparison correction. Dynamic (layer-to-layer) features do not outperform static features or a confound-only baseline.
+On GSM8K, substantial raw spectral differences are observed between correct and incorrect responses, with many surviving multiple-comparison correction. However, these effects are eliminated by screening for response length, attention-sink mass, and effective rank. On ARC-Challenge, raw spectral effects are minimal and do not provide robust predictive improvement beyond the confound-only baseline.
+
+Across both benchmarks, dynamic layer-to-layer spectral features do not outperform static features or the confound-only baseline, providing no evidence that spectral dynamics add predictive signal for reasoning correctness beyond the tested structural confounds.
 
 ## Reproducibility
 
